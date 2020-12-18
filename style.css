@@ -1,0 +1,260 @@
+/*
+Theme Name: Chaos et Cosmos
+Description: Theme enfant pour adapter Hello Elementor au besoin du site de Chaos et Cosmos
+Author: Margot Nadot
+Author URI: https://margotnadot.com
+Template: hello-elementor 
+Version: 0.1.0
+*/
+
+body {
+    background-color: red;
+}
+
+/*
+==========================================================================================
+==========================================================================================
+Haut de page
+==========================================================================================
+==========================================================================================
+*/
+
+/*
+---------------------------------------------
+Responsive du menu principal
+---------------------------------------------
+*/
+
+.site-header {
+    max-width: none !important;
+    justify-content: center;
+}
+
+
+@media (min-width: 768px) {
+    .site-header {
+        margin: 0 4em !important;
+        width: calc(100% - 8em);
+    }
+}
+
+@media (max-width: 767px) {
+    .site-header {
+        margin: 0 1em;
+        width: calc(100% - 2em);
+    }
+}
+
+.site-navigation {
+    flex-grow: inherit !important;
+}
+
+#menu-menu-principal {
+    justify-content: center;
+}
+
+/*
+---------------------------------------------
+Inhiber les sous menus sur mobile
+---------------------------------------------
+*/
+
+@media (max-width: 767px) {
+    .site-navigation ul.menu li.menu-item-has-children::after {
+        display: none;
+    }
+
+    .sub-menu {
+        display: none !important;
+    }
+}
+
+/*
+---------------------------------------------
+Style des entrées du menu
+---------------------------------------------
+*/
+
+.site-navigation ul.menu li a {
+    font-family: "Source Code Pro";
+    text-transform: uppercase;
+    color: #3F3F3C;
+}
+
+@media (max-width: 767px) {
+    .site-navigation {
+        font-size: 0.875em;
+    }
+
+    .site-navigation ul.menu li a {
+        padding: 0.25em 1em;
+    }
+}
+
+/*
+---------------------------------------------
+Ajouter les "|" devant chaque entrée de premier niveau du menu
+---------------------------------------------
+*/
+
+@media (min-width: 1140px) {
+    .site-branding {
+        margin-right: 2em;
+    }
+}
+
+
+@media (min-width: 768px) {
+    .site-navigation ul.menu > li:before {
+        content: "|";
+        position: relative;
+        top: 0.35em;
+        color: #FE7B67;
+    }
+}
+
+/*
+---------------------------------------------
+1. Faire disparaitre le h1 du thème
+2. Mettre le menu en transparence sur la première section
+---------------------------------------------
+*/
+
+.page-header {
+    display: none;
+}
+
+@media (min-width: 1140px) {
+
+    .site-header {
+        position: absolute;
+        z-index: 5;
+    }
+
+    .elementor-editor-active .site-header {
+        display: none !important;
+    }
+
+    .elementor-section-wrap > section:first-child {
+        padding-top: 8em !important;
+    }
+
+}
+
+/*
+==========================================================================================
+==========================================================================================
+Bas de page
+==========================================================================================
+==========================================================================================
+*/
+
+.site-footer {
+    background-color: #FE7B67;
+    padding: 1em 0 4em;
+}
+
+.footer__logo {
+    background-image: url("img/chaos-cosmos_blanc.png");
+    min-height: 100px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 1em 0;
+}
+
+@media (min-width: 600px) {
+    .menu-footer-container {
+        column-count: 3;
+    }
+}
+
+.footer-site__links {
+    list-style: none;
+    padding-left: 0;
+}
+
+.footer-site__links > li {
+    text-align: center;
+}
+
+.footer-site__links > li > a {
+    color: #ffffff;
+}
+
+/*
+==========================================================================================
+==========================================================================================
+LAYOUT
+==========================================================================================
+==========================================================================================
+*/
+
+
+.chimney {
+    width: calc(100% - 6em);
+    max-width: 800px;
+    margin: 0 auto;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+    padding: 0;
+}
+
+/*
+==========================================================================================
+==========================================================================================
+Styles ponctuels
+==========================================================================================
+==========================================================================================
+*/
+
+.elementor-widget-button .elementor-button {
+	background-color: #FFFFFF !important;
+	font-size: 0.75em;
+}
+
+h1 {
+    font-size: 4em !important;
+    color: #3F3F3C !important;
+    margin: 0.5em 0 !important;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2em !important;
+    }
+}
+
+h2 {
+    font-size: 3em !important;
+}
+
+@media (max-width: 600px) {
+    h2 {
+        font-size: 2em !important;
+    }
+}
+
+h3 {
+    font-size: 1.75em !important;
+}
+
+@media (max-width: 600px) {
+    h3 {
+        font-size: 1.5em !important;
+    }
+}
+
+h4 {
+    font-size: 1.5em !important;
+}
+
+@media (max-width: 600px) {
+    h4 {
+        font-size: 1.25em !important;
+    }
+}
+
+h3, h5 { color: #3F3F3C !important; }
+
